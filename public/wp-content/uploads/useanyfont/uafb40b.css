@@ -1,0 +1,10 @@
+				@font-face {
+					font-family: 'a5';
+					src: url('6085a5.woff2') format('woff2'),
+						url('6085a5.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.a5{font-family: 'a5' !important;}
+
+		
