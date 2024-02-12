@@ -23,13 +23,18 @@ func main() {
 	app.Get("/", func(c *fiber.Ctx) error {
 		m := c.Queries()
 
+		nama := "Tamu Undangan di Tempat"
+		if m["to"] != "" {
+			nama = m["to"]
+		}
+
 		// Render index
 		return c.Render("index", fiber.Map{
 			"Title":    "The Wedding of Faisal & Monica",
 			"Mempelai": "Faisal & Ica",
 			"Pria":     "Faisal Akbar Taufiq, S.S.T.Pel",
 			"Wanita":   "Monica Purita",
-			"Nama":     m["to"],
+			"Nama":     nama,
 		})
 	})
 
